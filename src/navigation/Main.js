@@ -20,6 +20,14 @@ const MainStack = () => {
         }}
         component={screens.DiscountsContainer}
       />
+      <MainStackNav.Screen
+        name="DetailsBenefitInfo"
+        options={{
+          headerShown: false,
+        }}
+        component={screens.DetailsBenefitInfoContainer}
+      />
+
     </MainStackNav.Navigator>
   );
 };
