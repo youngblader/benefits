@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-project",
-    "slug": "my-project",
+    "name": "benefits",
+    "slug": "benefits",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/youngblader/benefits"
   }
 }
