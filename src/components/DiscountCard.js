@@ -4,9 +4,9 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 const DiscountCard = ({ item = {}, cardStyle = {}, onPress = () => {} }) => {
   return (
     <TouchableOpacity style={styles.wrapper} onPress={onPress}>
-      {/* FastImage */}
       <View>
-        <Image 
+        {/* FastImage */}
+        <Image
           style={[styles.card, cardStyle]}
           source={{ uri: item.source }} 
           resizeMode={'cover'} 

@@ -7,41 +7,41 @@ import data from '../../config/data.json'
 const Discounts = props => {
   const renderItem = ({ item, index }) => {
     const { currentItems, moreItems } = props.modifiedData(data[item.category]);
-  
-      return (
-        <View style={styles.cardWrapper}>
-          <Divider 
-            title={item.title} 
-            rightTitle='Все' 
-            onPressNavigate={() =>
-              props.handleOnPressCategory(item, index)
-            }
-          />
+    
+    return (
+      <View style={styles.cardWrapper}>
+        <Divider 
+          title={item.title} 
+          rightTitle='Все' 
+          onPressNavigate={() =>
+            props.handleOnPressCategory(item, index)
+          }
+        />
 
-          <FlatList
-            data={currentItems}
-            contentContainerStyle={styles.flatlistInsets}
-            renderItem={({ item }) => (
-              <DiscountCard
-                cardStyle={styles.discountCard}
-                item={item}
-                onPress={() => props.handleSelectBenefit(item)}
-              />         
-            )}
-            horizontal={true}
-            keyExtractor={item => item.id}
-            showsHorizontalScrollIndicator={false}
-            ListFooterComponentStyle={styles.paddingInsets}
-            ListFooterComponent={
-              <TouchableOpacity onPress={() => props.handleOnPressCategory(item, index)}>
-                <View style={styles.moreCard}>
-                  <Text>Смотреть еще {moreItems.length}</Text>
-                </View>
-              </TouchableOpacity>
-            }
-          />
-        </View>
-      )
+        <FlatList
+          data={currentItems}
+          contentContainerStyle={styles.flatlistInsets}
+          renderItem={({ item }) => (
+            <DiscountCard
+              cardStyle={styles.discountCard}
+              item={item}
+              onPress={() => props.handleSelectBenefit(item)}
+            />         
+          )}
+          horizontal={true}
+          keyExtractor={item => item.id}
+          showsHorizontalScrollIndicator={false}
+          ListFooterComponentStyle={styles.paddingInsets}
+          ListFooterComponent={
+            <TouchableOpacity onPress={() => props.handleOnPressCategory(item, index)}>
+              <View style={styles.moreCard}>
+                <Text>Смотреть еще {moreItems.length}</Text>
+              </View>
+            </TouchableOpacity>
+          }
+        />
+      </View>
+    )
     
   }
 

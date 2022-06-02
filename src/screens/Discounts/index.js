@@ -42,7 +42,6 @@ const DiscountsContainer = props => {
       scrollRef={scrollRef}
       activeCategory={activeCategory}
       selectCategory={selectCategory}
-
       modifiedData={modifiedData}
       handleOnPressCategory={handleOnPressCategory}
       handleSelectBenefit={handleSelectBenefit}
