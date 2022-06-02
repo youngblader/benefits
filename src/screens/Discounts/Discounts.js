@@ -25,7 +25,7 @@ const Discounts = props => {
               <DiscountCard
                 cardStyle={styles.discountCard}
                 item={item}
-                onPress={() => props.handleSelectBenefit(item.id)}
+                onPress={() => props.handleSelectBenefit(item)}
               />         
             )}
             horizontal={true}
