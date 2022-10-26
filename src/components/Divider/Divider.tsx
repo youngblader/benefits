@@ -1,6 +1,8 @@
+import React, { FC } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity  } from 'react-native';
+import { DividerProps } from './types';
 
-const Divider = ({ title = '', rightTitle = '', onPressNavigate = () => {} }) => {
+const Divider: FC<DividerProps> = ({ title, rightTitle, onPressNavigate, }) => {
   return (
     <TouchableOpacity onPress={onPressNavigate}>
       <View style={styles.container}>

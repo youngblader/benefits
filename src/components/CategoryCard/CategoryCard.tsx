@@ -1,6 +1,8 @@
+import React, { FC } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity  } from 'react-native';
+import { CategoryCardProps } from './types';
 
-const CategoryCard = ({ item = {}, activeItem = 0, onPress = () => {} }) => {
+const CategoryCard: FC<CategoryCardProps> = ({ item, activeItem, onPress }) => {
   const backgroundColor = item?.id === activeItem.id ? '#1F51FF' : '#FFF';
   const color = item?.id === activeItem.id ? 'white' : 'black' 
   

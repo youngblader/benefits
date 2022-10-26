@@ -1,15 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { FC, useState, useRef } from 'react';
 import Discounts from './Discounts';
+import { Category } from '../../components/CategoryCard/types';
+import { IDiscount } from '../../components/DiscountCard/types';
 
 const startNavigationItem =  { id: 0, title: 'Все скидки' };
 
-const DiscountsContainer = props => {
+const DiscountsContainer: FC = props => {
   const [selectCategory, setSelectCategory] = useState(startNavigationItem || {});
   const [activeCategory, setActiveCategory] = useState(false);
 
   const scrollRef = useRef();
   
-  const handleSelectBenefit = el => {
+  const handleSelectBenefit = (el: IDiscount) => {
     props.navigation.navigate('DetailsBenefitInfo', { benefit: el });
   };
 
@@ -29,7 +31,7 @@ const DiscountsContainer = props => {
     }, { currentItems: [], moreItems: [] });
   }
 
-  const handleOnPressCategory = (item, index, navigate = false) => {
+  const handleOnPressCategory = (item: Category, index: number, navigate = false) => {
     if (!navigate) {
       setActiveCategory(true);
       scrollRef?.current?.scrollToIndex({

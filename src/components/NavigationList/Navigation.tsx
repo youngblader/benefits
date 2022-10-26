@@ -1,7 +1,9 @@
+import React, { FC } from 'react';
 import { View, StyleSheet, FlatList  } from 'react-native';
-import { CategoryCard } from '../components';
+import { CategoryCard } from '..';
+import { NavigationProps } from './types';
 
-const Navigation = ({ data = [], scrollRef, activeItem = 0, onPress = () => {}  }) => {
+const Navigation: FC<NavigationProps> = ({ data, scrollRef, activeItem = 0, onPress, }) => {
   return (
     <View style={styles.navigationContainer}>
       <FlatList

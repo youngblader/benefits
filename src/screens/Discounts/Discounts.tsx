@@ -1,8 +1,9 @@
+import React from 'react';
 import { StyleSheet, View, FlatList, Text, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { DiscountCard, Divider, Navigation } from '../../components';
-import data from '../../config/data.json'
+import data from '../../config/data.json';
 
 const Discounts = props => {
   const renderItem = ({ item, index }) => {

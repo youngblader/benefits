@@ -1,7 +1,10 @@
 
+import React, { FC } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { DiscountCardProps  }  from './types'
 
-const DiscountCard = ({ item = {}, cardStyle = {}, onPress = () => {} }) => {
+
+const DiscountCard: FC<DiscountCardProps> = ({ item, cardStyle, onPress, }) => {
   return (
     <TouchableOpacity style={styles.wrapper} onPress={onPress}>
       <View>
